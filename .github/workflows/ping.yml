@@ -9,5 +9,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      - name: Print Timestamp (Debug)
+        run: echo "Workflow ran at: $(date -u) UTC"
+
       - name: Ping Render App
         run: curl -s https://empowerfund.onrender.com/ > /dev/null
